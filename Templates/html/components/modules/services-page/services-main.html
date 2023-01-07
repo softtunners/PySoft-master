@@ -1,0 +1,175 @@
+{% comment %} Our Domain Expertise Section Starts From Here {% endcomment %}
+<section class="services-style-two-area bg-dark text-light default-padding soft-services-main">
+  {% comment %} Shape {% endcomment %}
+  <div class="shape" style="background-image: url(assets/img/shape/29.png)"></div>
+  {% comment %} End Shape{% endcomment %}
+  <div class="container">
+    <div class="heading-left">
+      <div class="row">
+        <div class="col-lg-6 soft-serve-100">
+          <h5 class="sub-heading light">Our services</h5>
+          <h2 class="heading">"Expert solutions for your business needs"</h2>
+          <br />
+          <p>
+            Unlock your full potential with tailored service solutions: expert
+            guidance, personalized attention, and measurable results
+          </p>
+          <br />
+          <p>
+            Our website development services are designed to help businesses of
+            all sizes establish a professional online presence. Our team of
+            experienced designers and developers will work with you to create a
+            custom website that reflects your brand and meets the needs of your
+            target audience. In addition to traditional website design, we also
+            offer services in mobile development and AI integration.
+          </p>
+          <br />
+          <p>
+            In today's digital age, staying ahead of the competition requires a
+            strong online presence and the ability to leverage technology.
+            That's where our machine learning and digital automation services
+            come in. Our team of experts will help you harness the power of
+            these cutting-edge technologies to streamline your operations and
+            drive success. From chatbots and automated marketing campaigns to
+            predictive analytics and beyond, we have the skills and experience
+            to help your business thrive in the digital world.
+          </p>
+        </div>
+        <div class="col-lg-6 soft-serve-100">
+          <div class="services-style-one-box soft-service-col-sec">
+            <div id="serviceList" class="row">
+              {% comment %} Services Card {% endcomment %}
+              
+              {% comment %} Services Card Ends {% endcomment %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% comment %} Our Domain Expertise Section Ends Here {% endcomment %}
+
+<script>
+
+
+  // Array for Services List
+  const serviceObject = [
+    {
+      icon: 'flaticon-data-management',
+      serviceDetails: "let's Build an Amaing website, It's Helps Your Potential customer to know about your businesses.",
+      serviceName: "Website Development",
+      pageLink: ''
+    },
+    {
+      icon: 'flaticon-software',
+      serviceDetails: " Having an app idea, We have a great Mobile Team, Let's Build it together.",
+      serviceName: "Mobile Development",
+      pageLink: ''
+    },
+    {
+      icon: 'flaticon-augmented-reality',
+      serviceDetails: " We also help creating robust and amazing softwares for all the Operating.",
+      serviceName: "Software Development",
+      pageLink: ''
+    },
+    {
+      icon: 'flaticon-gadget',
+      serviceDetails: "Your product should look amazing, Our team also help creating amazing Design for Your product",
+      serviceName: "UI/UX Designing",
+      pageLink: ''
+    },
+      {
+      icon: 'flaticon-gadget',
+      serviceDetails: "Your product should look amazing, Our team also help creating amazing Design for Your product",
+      serviceName: "Cloud Deployment",
+      pageLink: ''
+    },
+    {
+        icon: 'flaticon-gadget',
+        serviceDetails: "Your product should look amazing, Our team also help creating amazing Design for Your product",
+        serviceName: "AI/ML",
+        pageLink: ''
+      },
+  ];
+
+  const serviceList = serviceObject.map(service => `
+  <div class="services-style-one col-lg-6 soft-2nd-card">
+    <div class="item style-one-item">
+      <i class="${service.icon}"></i>
+      <p>${service.serviceDetails}</p>
+      <div class="bottom">
+        <h4><a href="javascript:void(0)">${service.serviceName}</a></h4>
+        <a href="javascript:void(0)"><i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+`).join('');
+
+  const serviceTarget = document.getElementById('serviceList');
+  serviceTarget.innerHTML = serviceList;
+</script>
+
+<style>
+  .soft-services-main {
+    overflow: inherit;
+  }
+
+  .soft-service-col-sec {
+    margin-top: -450px;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .soft-2nd-card {
+    background: transparent;
+    min-height: 370px;
+  }
+
+  .soft-2nd-card .item::after {
+    background: #041736;
+  }
+
+  .soft-2nd-card .item .bottom h4 a {
+    color: white;
+  }
+
+  .soft-2nd-card .item .bottom {
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .soft-2nd-card .item {
+    height: 100%;
+  }
+
+  @media screen and (max-width: 1224px) {
+    .soft-serve-100 {
+      width: 100%;
+    }
+
+    .soft-service-col-sec {
+      margin-top: 0px;
+      z-index: 1;
+      position: relative;
+      margin-top: 40px;
+    }
+
+    .soft-2nd-card {
+      width: calc(100% / 3);
+    }
+  }
+
+  @media screen and (max-width:1024px) {
+    .soft-2nd-card {
+      width: calc(100% / 2);
+    }
+  }
+
+  @media screen and (max-width:552px) {
+    .soft-2nd-card {
+      width: 100%;
+    }
+  }
+ 
+</style>

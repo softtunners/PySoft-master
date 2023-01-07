@@ -1,0 +1,167 @@
+{% comment %} Header Part Start From Here {% endcomment %}
+<header>
+    {% comment %} Navigation Parts Starts From Here {% endcomment %}
+    <nav class="navbar mobile-sidenav nav-border attr-border attr-border-full navbar-sticky navbar-default validnavs navbar-fixed white no-background">
+
+        {% comment %} Top Search Starts From Here {% endcomment %}
+        <div class="top-search">
+            <div class="container-xl">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                </div>
+            </div>
+        </div>
+        {% comment %} Top Search Ends Here {% endcomment %}
+
+        <div class="container-fill d-flex justify-content-between align-items-center">
+            {% comment %} Header Navigation {% endcomment %}
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="bi bi-list"></i>
+                </button>
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <span class="logo-white">Soft<span class="logo-inner-white">Tunners</span>
+                </a>
+            </div>
+            {% comment %} Header Navigation Ends Here {% endcomment %}
+
+            {% comment %} Side Navigation {% endcomment %}
+            <div class="collapse navbar-collapse" id="navbar-menu">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="bi bi-x"></i>
+                </button>
+
+                <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                    {% comment %} Home {% endcomment %}
+                    <li>
+                        <a href="{% url 'home' %}" class="active">Home</a>
+                    </li>
+                    {% comment %} Company {% endcomment %}
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Company</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li><a href="{% url 'team' %}">Our Team</a></li>
+                        </ul>
+                    </li>
+                    {% comment %} Our Services {% endcomment %}
+                    <li>
+                        <a href="{% url 'service' %}" class="active">Our Services</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'blogs' %}">Blog</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contact' %}">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#login">Customer Login</a>
+                    </li>
+                </ul>
+            </div>
+           
+
+            <div class="attr-right">
+                {% comment %} Have Any Question {% endcomment %}
+                <div class="attr-nav">
+                    <ul>
+                        <li class="side-menu">
+                            <a href="javascript:void(0)">
+                                <span class="bar-1"></span>
+                                <span class="bar-2"></span>
+                                <span class="bar-3"></span>
+                            </a>
+                        </li>
+                        <li class="contact">
+                            <div class="call">
+                                <div class="icon">
+                                    <i class="fas fa-comments-alt-dollar"></i>
+                                </div>
+                                <div class="info">
+                                    <p>Have any Questions?</p>
+                                    <h5><a href="mailto:info@crysta.com">softtunners@gmail.com</a></h5>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                {% comment %} End Attribute Navigation {% endcomment %}
+
+                {% comment %} Side Menu {% endcomment %}
+                <div class="side">
+                    <a href="{% url 'home' %}" class="close-side"><i class="bi bi-x"></i></a>
+                    <div class="widget">
+                        <div class="logo">
+                            <span id="logo-white">Soft<span class="logo-inner-white">Tunners</span></span>
+                        </div>
+                        <p>
+                            We may be virtual, but we're here for you in a real way, Let's connect and turn your ideas into reality
+                        </p>
+                    </div>
+                    <div class="widget address">
+                        <div>
+                            <ul>
+                                <li>
+                                    <div class="content">
+                                        <p>Address</p>
+                                        <strong>Sakinaka, Mumbai, India 4000(72)</strong>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="content">
+                                        <p>Email</p>
+                                        <strong><a
+                                                href="mailto:softtunners@gmail.com">softtunners@gmail.com</a></strong>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="content">
+                                        <p>Contact</p>
+                                        <strong><a href="tel:+918879963368">+91 8879963368</a></strong>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget newsletter">
+                        <h4 class="title">Get Subscribed!</h4>
+                        <form action="#">
+                            <div class="input-group stylish-input-group">
+                                <input type="email" placeholder="Enter your e-mail" class="form-control" name="email">
+                                <span class="input-group-addon">
+                                    <button type="submit">
+                                        <i class="bi bi-mailbox"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="widget social">
+                        <ul class="link">
+                            <li><a href="javascript:void(0)"><i class="bi bi-facebook"></i></a></li>
+                            <li><a href="javascript:void(0)"><i class="bi bi-instagram"></i></a></li>
+                            <li><a href="javascript:void(0)"><i class="bi bi-linkedin"></i></a></li>
+                            <li><a href="javascript:void(0)"><i class="bi bi-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+               {% comment %} Side Menu End {% endcomment %}
+
+                {% comment %} Overlay screen {% endcomment %}
+                <div class="overlay-screen"></div>
+                {% comment %} Overlay Screen End {% endcomment %}
+
+            </div>
+          {% comment %} Main Menu End {% endcomment %}
+        </div>
+    </nav>
+    
+    {% comment %} Navigation End {% endcomment %}
+</header>
+{% comment %} Main Header Code Ends Here {% endcomment %}
+
+
+

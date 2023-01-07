@@ -1,0 +1,43 @@
+<div class="row">
+  {% for blog in blogs %}
+  <div class="col-xl-6 col-md-6 single-item">
+    <div class="blog-style-two">
+      <div class="thumb">
+        <a href="{% url 'blog' blog.pk %}"
+          ><img src="../../media/{{blog.thumbnail}}" alt="Thumb"
+        /></a>
+        <div class="tags">
+          <a href="javascript:void(0)">{{blog.category}}</a>
+        </div>
+      </div>
+      <div class="info">
+        <div class="meta">
+          <ul>
+            <li>
+              <a href="javascript:void(0)"
+                ><i class="far fa-comment-alt"></i>25 Comments</a
+              >
+            </li>
+            <li>
+              <a href="javascript:void(0)"><i class="far fa-heart"></i> 65</a>
+            </li>
+          </ul>
+        </div>
+
+        <a class="blog-title" href="{% url 'blog' blog.pk %}">{{blog.title}}</a>
+      </div>
+      <div class="author">
+        <div class="thumbs">
+          <a href="javascript:void(0)"
+            ><img src="assets/img/team/3.png" alt="Author"
+          /></a>
+        </div>
+        <div class="author-info">
+          <h5>{{blog.writer_name}}</h5>
+          <span>{{blog.post_date}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

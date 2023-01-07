@@ -1,0 +1,179 @@
+{% include 'html/connection/link.html' %}
+{%block title %} <title>SoftTunners || Home</title> {% endblock title %}
+{% block content %}
+
+<style>
+  .error-page-area{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    background: #091d3e !important;
+    border-bottom: 1px solid #172a49;
+  }
+  .error-page-area .error-box h1{
+    color: white;
+  }
+  .error-page-area .error-box h2{
+    color: white;
+  }
+  .error-page-area .error-box p{
+    color: white;
+  }
+
+  @media (max-width:772px) {
+    .error-page-area{
+    height: 100%;
+  }
+  }
+</style>
+
+
+<main class="softtunners-content">
+  {% include 'html/components/header.html' %}
+  <div class="error-page-area default-padding text-center">
+    <!-- Shape -->
+    <div class="shape" style="background: url(assets/img/shape/404.png);"></div>
+    <!-- End Shape -->
+    <div class="container">
+        <div class="error-box">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h1>404</h1>
+                    <h2>Sorry Page Was Not Found!</h2>
+                    <p>
+                        Household shameless incommode at no objection behaviour. Especially do at he possession insensible sympathize boisterous it. Songs he on an widen me event truth.
+                    </p>
+                    <a class="btn mt-30 btn-md btn-theme" href="{% url 'home' %}">Back to home</a>
+                    <button class="btn mt-30 btn-md btn-theme" onclick="history.back()">Go Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  {% include 'html/components/footer.html' %}
+</main>
+{% endblock content %}
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginHeader" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content softtunners-modal">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                        class="bi-x"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="heading">
+                    <h3>Customer Login</h3>
+                    <p>Log in to continue your Customer Portal</p>
+                </div>
+
+                <form action="/">
+                    <div class="form-group">
+                        <label for="email" class="label">Customer ID</label>
+                        <input type="email" class="form-control" placeholder="Enter Your Customer ID" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="label">Password</label>
+                        <div class="position-relative">
+                            <input type="password" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                    </div>
+                    <div class="form-group d-flex flex-wrap justify-content-between">
+                        <a href="" class="font-size-3 text-dodger line-height-reset">Forget Password</a>
+                    </div>
+                    <div class="form-group mb-8 button">
+                        <button class="btn ">Log in
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<style>
+    .softtunners-modal {
+        overflow: hidden;
+        background: #091d3e;
+    }
+
+    .softtunners-modal::after {
+        position: absolute;
+        left: 5%;
+        top: 0%;
+        content: "";
+        height: 100px;
+        width: 100px;
+        background: #104cba;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        background-size: 220% 150%;
+        opacity: 1;
+        -webkit-transition: all 0.35s ease-in-out;
+        transition: all 0.35s ease-in-out;
+        -webkit-transition-delay: 900ms;
+        transition-delay: 900ms;
+        border-radius: 50%;
+        filter: blur(80px);
+        -webkit-filter: blur(80px);
+    }
+
+    .softtunners-modal .modal-header {
+        border-bottom: 0;
+        padding: 20px;
+
+    }
+
+    .softtunners-modal .modal-body {
+        z-index: 1;
+    }
+
+    .softtunners-modal .btn-close {
+        color: #fff;
+        background: #091d3e;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        width: auto;
+        right: 10px;
+        position: absolute;
+    }
+
+    .softtunners-modal .modal-header i::before {
+        font-size: 18px;
+    }
+
+    .softtunners-modal .modal-body .heading h3 {
+        color: white;
+        margin-bottom: 0.5rem;
+    }
+
+    .softtunners-modal .modal-body .heading p {
+        color: aliceblue;
+        font-weight: 100;
+    }
+
+    .softtunners-modal .label {
+        color: white;
+    }
+
+    .softtunners-modal .form-control {
+        background-color: #ffffff0a;
+        border: 1px solid #ced4da00;
+        color: white;
+    }
+
+    .softtunners-modal .form-group {
+        margin-bottom: 1rem;
+    }
+</style>

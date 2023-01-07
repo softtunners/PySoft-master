@@ -1,0 +1,20 @@
+{% comment %} Connection Link is the main page with connnect all the link together {% endcomment %}
+{% include 'html/connection/link.html' %}
+{% comment %} Title of the Page {% endcomment %}
+{%block title %} <title>SoftTunners || Team</title> {% endblock title %}
+
+{% comment %} Block Content has all the page level Components {% endcomment %}
+{% block content %}
+<main class="softtunners-content">
+    {% comment %} Header Component {% endcomment %}
+    {% include 'html/components/header.html' %}
+    {% comment %} Team Players Banner Component {% endcomment %}
+    {% include 'html/components/modules/team-page/team-banner.html' %}
+    {% comment %} Team Player Main Component Start from Here {% endcomment %}
+    {% include 'html/components/modules/team-page/team-players.html' %}
+    {% comment %} Global Level Footer Component {% endcomment %}
+    {% include 'html/components/footer.html' %}
+</main>
+{% endblock content %}
+
+

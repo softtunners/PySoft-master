@@ -1,0 +1,18 @@
+{% comment %} Connection Link is the main page with connnect all the link together {% endcomment %}
+{% include 'html/connection/link.html' %} 
+{% comment %} Title of the Page {% endcomment %}
+{%block title %} <title>SoftTunners || {title of the Blog Goes Here} &amp; Articles</title> {% endblock title %}
+
+{% comment %} Block Content has all the page level Components {% endcomment %}
+{% block content %}
+<main class="softtunners-content">
+    {% comment %} Header Component {% endcomment %}
+    {% include 'html/components/header.html' %}
+    {% comment %} Blog Single Banner Component {% endcomment %}
+    {% include 'html/components/modules/blogsingle-page/blogsingle-banner.html' %}
+    {% comment %} Blog Main Component Start from Here {% endcomment %}
+    {% include 'html/components/modules/blogsingle-page/blogsingle-main.html' %}
+    {% comment %} Global Level Footer Component {% endcomment %}
+    {% include 'html/components/footer.html' %}
+</main>
+{% endblock content %}

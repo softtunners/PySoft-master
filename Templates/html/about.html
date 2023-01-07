@@ -1,0 +1,17 @@
+{% include 'html/connection/link.html' %} 
+{% comment %} Title of the Page {% endcomment %}
+{%block title %} <title>SoftTunners || About</title> {% endblock title %}
+{% comment %} About Us Block Component {% endcomment %}
+
+{% block content %}
+<main class="softtunners-content">
+    {% comment %} Header Component  {% endcomment %}
+    {% include 'html/components/header.html' %}
+    {% comment %} Banner Component {% endcomment %}
+    {% include 'html/components/modules/about-page/about-banner.html' %}
+    {% comment %} Main Level Component {% endcomment %}
+    {% include 'html/components/modules/about-page/about-content.html' %}
+    {% comment %} Footer Component {% endcomment %}
+    {% include 'html/components/footer.html' %}
+</main>
+{% endblock content %}

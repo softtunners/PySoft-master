@@ -1,0 +1,248 @@
+{% comment %} Blog Card Main Section Starts from Here {% endcomment %}
+<section class="blog-area full-blog default-padding">
+  <div class="container">
+    <div class="blog-items">
+      <div class="row">
+        <div
+          class="blog-content soft-blog-area"
+        >
+          {% include 'html/components/blog/blogCard.html' %} 
+          <div class="row">
+            <div class="col-md-12 pagi-area text-center">
+              <nav aria-label="navigation">
+                {% if blogs.has_other_pages %}
+                <ul class="pagination">
+                  {% if blogs.has_previous %}
+                  <li class="page-item">
+                    <a
+                      class="page-link"
+                      href="?page={{ blogs.previous_page_number }}"
+                      ><i class="bi bi-chevron-left"></i
+                    ></a>
+                  </li>
+                  {% else %}
+                  <li class="disabled"></li>
+                  {% endif %} {% for i in blogs.paginator.page_range %} 
+                  {% if blogs.number == i %}
+                  <li class="page-item active">
+                    <a class="page-link" href="javascript:void(0)">{{ i }}</a>
+                  </li>
+                  {% else %}
+                  <li class="page-item">
+                    <a class="page-link" href="?page={{ i }}">{{ i }}</a>
+                  </li>
+                  {% endif %} {% endfor %} {% if blogs.has_next %}
+                  <li class="page-item">
+                    <a
+                      class="page-link"
+                      href="?page={{ posts.next_page_number }}"
+                      ><i class="bi bi-chevron-right"></i
+                    ></a>
+                  </li>
+                  {% else %}
+                  <li class="disabled"></li>
+                  {% endif %}
+                </ul>
+                {% endif %}
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="sidebar soft-blog-sidebar">
+          <aside>
+            <div class="soft-aside">
+              <h3>Filter Search</h3>
+              <div class="sidebar-item search">
+                <form>
+                  <select class="form-select" aria-label="Select Catogery">
+                    <option selected>Select Catogery</option>
+                    <option value="1">Website Development</option>
+                    <option value="2">Mobile Development</option>
+                    <option value="3">Software Development</option>
+                  </select>
+                  <select class="form-select" aria-label="Select Year">
+                    <option selected>Select Year</option>
+                    <option value="1">2021</option>
+                    <option value="2">2022</option>
+                    <option value="3">2023</option>
+                  </select>
+                  <button class="btn btn-gradient btn-md radius animation" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+            <div class="soft-aside soft-aside-2">
+              <h3>Recent Blogs</h3>
+              <div class="sidebar-item">
+                <div class="soft-react-blog">
+                  <div class="soft-body">
+                    <h4 class="card-title">{{blogs.title}}</h4>
+                    <p class="card-text">{{blog.post_date}}</p>
+                  </div>
+                  <a href="javascript:void(0)"> <i class="bi bi-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="soft-aside">
+              <h3>Quick Tags</h3>
+              <div class="sidebar-item tags soft-tags">
+                <div class="sidebar-info">
+                  <ul>
+                    <li><a href="javascript:void(0)">Fashion</a></li>
+                    <li><a href="javascript:void(0)">Education</a></li>
+                    <li><a href="javascript:void(0)">nation</a></li>  
+                    <li><a href="javascript:void(0)">study</a></li>
+                    <li><a href="javascript:void(0)">health</a></li>
+                    <li><a href="javascript:void(0)">food</a></li>
+                    <li><a href="javascript:void(0)">travel</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </aside>
+        </div>
+        {% comment %} Side Bar Ends Here {% endcomment %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .soft-blog-area {
+    width: calc(100% - 25%);
+  }
+
+  .soft-blog-sidebar {
+    width: 25%;
+  }
+
+  .sidebar .sidebar-item {
+    padding: 0px;
+    background: transparent;
+  }
+
+  .sidebar .search form select {
+    margin-bottom: 10px;
+    height: 45px;
+  }
+
+  .sidebar button[type="submit"] {
+    position: relative;
+    width: 100%;
+    padding: inherit;
+    min-height: 45px !important;
+    height: 45px;
+    right: 0;
+    border-radius: 4px;
+    margin-top: -5px;
+  }
+
+  .soft-react-blog {
+    flex-direction: row;
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+    background: transparent;
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  .soft-react-blog:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .soft-react-blog .soft-body {
+    background-color: transparent;
+    width: calc(100% - 40px);
+    padding: 5px 0 10px 10px;
+  }
+
+  .soft-react-blog .soft-body h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .soft-react-blog .soft-body p {
+    font-size: 14px;
+    margin-bottom: 0px;
+  }
+
+  .soft-react-blog a {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: inherit;
+    color: black;
+    font-weight: 600;
+    border-radius: 4px;
+  }
+
+
+  .soft-tags {
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  .sidebar .sidebar-item.tags ul li a {
+    border-radius: 4px;
+  }
+  aside{
+    display: flex;
+    flex-direction: column;
+  }
+  .soft-aside{
+    margin-bottom: 30px;
+  }
+
+
+  @media screen and (max-width: 1199px) {
+    .soft-blog-area {
+      width: calc(100% - 30%);
+    }
+
+    .soft-blog-sidebar {
+      width: 30%;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    aside {
+      display: flex;
+      flex-direction: row;
+      margin-top: 30px;
+    }
+
+    .soft-blog-area {
+      width: 100%;
+    }
+
+    .soft-blog-sidebar {
+      width: 100%;
+    }
+
+    .soft-aside {
+      width: calc(100% / 2);
+      padding: 10px;
+    }
+    .soft-aside-2{
+      display: none;
+    }
+  }
+
+  
+  @media screen and (max-width: 552px) {
+    aside {
+      flex-direction: column;
+    }
+    .soft-aside {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+</style>

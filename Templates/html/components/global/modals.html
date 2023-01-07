@@ -1,0 +1,140 @@
+
+{% comment %} PopUp Modal Code for Subscribe Start from Here {% endcomment %}
+<div class="modal fade" id="login" tabindex="-1" aria-labelledby="subscribeHeader" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content softtunners-modal">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="bi-x"></i></button>
+                </div>
+                <div class="modal-body">
+    
+                    <div class="f-item newsletter">
+                            <h3 class="widget-title">Customer Login</h3>
+                            <p>
+                                    Log in to continue to your Customer Portal.
+                            </p>
+                            <form action="#">
+                                    <input type="text" class="form-control" placeholder="Enter Your Customer ID" id="email">
+                                    <input type="password" class="form-control" id="password" placeholder="Enter password">
+                                <button data-bs-toggle="modal" data-bs-target="#login">Login</button>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% comment %} Pop Up Modal Subscribe Ends Here {% endcomment %}
+
+
+    <div class="modal fade" id="subscribe" tabindex="-1" aria-labelledby="subscribeHeader" aria-hidden="true">
+        <div class="modal-dialog success-modal">
+            <div id="success" class="modal-content softtunners-modal">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="bi-x"></i></button>
+                </div>
+                <div class="modal-body">
+                        <h3>You have been Subscribed to Our Newsletter!</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        .softtunners-modal {
+            overflow: hidden;
+            background: #091d3e;
+        }
+    
+        .softtunners-modal .modal-header{
+            border-bottom: 0;
+            padding: 20px;
+    
+        }
+    
+        .softtunners-modal .modal-body {
+           z-index: 1;
+        }
+        .softtunners-modal .btn-close{
+            color: #fff;
+            background: #091d3e;
+            margin: 0;
+            padding: 0;
+            height: auto;
+            width: auto;
+            right: 10px;
+            position: absolute;
+        }
+        .softtunners-modal .modal-header i::before{
+            font-size: 18px;
+        }
+        .softtunners-modal .modal-body .widget-title{
+            font-weight: 600;
+        font-size: 22px;
+        color: white;
+        margin-bottom: 30px; 
+        }
+        .softtunners-modal .modal-body .newsletter p{
+            margin: 0 0 15px;
+        text-transform: none;
+        font-weight: 400;
+        font-size: 16px;
+        font-family: "Yantramanav", sans-serif;
+        color: #cccccc !important;
+        }
+    
+        .softtunners-modal .form-control{
+            background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #ffffff;
+        margin-bottom: 2rem;
+        }
+        .softtunners-modal form button{
+            border: none;
+        padding: 11px;
+        width: 100%;
+        border-radius: 5px;
+        font-weight: 500;
+        background: transparent;
+        position: relative;
+        z-index: 1;
+        color: #ffffff;
+        background-color: #104cba;
+        }
+    
+    
+        .success-modal{
+            max-width: 300px;
+            position: absolute!important;
+        width: auto;
+        margin: 0.5rem;
+        bottom: 30px!important;
+        pointer-events: none;
+        right: 30px!important;
+        }
+    
+        #success{
+            background-color: rgb(121, 216, 121);
+        }
+        #success .btn-close{
+            background: transparent;
+            color: rgb(1, 87, 1);
+        }
+        #success .modal-body{
+            text-align: center;
+        }
+        #success .modal-body h3{
+            color:  rgb(1, 87, 1);
+            font-size: 18px;
+            font-weight: 600;
+        }
+    
+        @media screen and (max-width:552px) {
+            .success-modal{
+            max-width: 100%;
+            right: 5px!important;
+        }
+        }
+    </style>

@@ -1,0 +1,23 @@
+{% comment %} Connection Link is the main page with connnect all the link together {% endcomment %}
+{% include 'html/connection/link.html' %}
+{% comment %} Title of the Page {% endcomment %}
+{%block title %}<title>SoftTunners || Our Services</title> {% endblock title %}
+ 
+
+{% comment %} Block Content has all the page level Components {% endcomment %}
+{% block content %}
+<main class="softtunners-content">
+  {% comment %} Header Component {% endcomment %}
+  {% include 'html/components/header.html' %} 
+  {% comment %} Banner Component {% endcomment %}
+  {% include 'html/components/modules/services-page/services-banner.html' %}
+  {% comment %} Our Main Services Component {% endcomment %}
+  {% include 'html/components/modules/services-page/services-main.html' %}
+  {% comment %} Our Domain Expetise Component {% endcomment %}
+  {% include 'html/components/modules/services-page/services-domain.html' %}
+  {% comment %} Our Technologies Component {% endcomment %}
+  {% include 'html/components/modules/services-page/services-tech.html' %}
+  {% comment %} Global Level Footer Component {% endcomment %}
+  {% include 'html/components/footer.html' %}
+</main>
+{% endblock content %}
